@@ -1,0 +1,20 @@
+project=
+system=H2
+
+Dists=(0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0 2.1 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3.0)
+
+mkdir $project/Output/$system
+mkdir $project/Data/$system
+mkdir $project/Data/$system/Probability_Distribution
+mkdir $project/Data/$system/Chkfile
+mkdir $project/Data/$system/Density
+mkdir $project/Data/$system/Energy
+mkdir $project/Data/$system/Res
+mkdir $project/Data/$system/qEOM
+mkdir $project/Data/$system/Dipole
+mkdir $project/Data/$system/VAC
+mkdir $project/Data/$system/Operator_Contamination
+
+for dist in "${Dists[@]}"; do
+    nohup python -u $project/Code/Running/$system"_QSE.py" $dist > $project/Output/$system/output_QSE_$dist &
+done
