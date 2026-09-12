@@ -2,10 +2,7 @@
 
 Reference implementation and analysis scripts for the paper
 
-> **Excitation-Energy Accuracy Does Not Guarantee Observable Fidelity: Rethinking Validation of Excited-State Quantum Algorithms**
-> Gyumin Kim, Youngsam Kim, Sehun Kim, and Eunji Sim
-> Department of Chemistry, Yonsei University
-> Contact: esim@yonsei.ac.kr
+> Code written by Gyumin Kim
 
 The repository contains `pyqake`, a small Qiskit + PySCF toolkit for UCC / qEOM / QSE excited-state
 calculations with direct observable evaluation, and the notebooks used to produce the figures of the paper.
