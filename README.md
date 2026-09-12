@@ -1,7 +1,5 @@
 # AqEOM — Anti-Hermitized quantum Equation-of-Motion
 
-Reference implementation and analysis scripts for the paper
-
 > Code written by Gyumin Kim
 
 The repository contains `pyqake`, a small Qiskit + PySCF toolkit for UCC / qEOM / QSE excited-state
