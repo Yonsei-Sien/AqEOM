@@ -168,7 +168,6 @@ The CASCI reference always uses the same active space as qEOM.
 | `H2_Huge` | H₂ | 6-311G | full | 0.5–2.0 | 3 | Fig. S16 |
 | `LiH_Large` | LiH | 6-31G | (2e, 5o) | 1.0–2.0 | 4 | Fig. S17 |
 | `H2O_Small` | H₂O | STO-3G | (8e, 5o) | 0.7–1.6 | 3 | SI.10 (QSE comparison) |
-| `CH4` | CH₄ | STO-3G | (2e, 5o) | — | 3 | script only, not in the paper |
 
 The heaviest atom sits at the origin. Molecule geometry and active space are **hard-coded in each script**
 (look for `!!! Active Space Here !!!`); the scripts take only the bond length as `sys.argv[1]`.
@@ -278,4 +277,4 @@ the Supplementary Information.
 
 ## Citation
 
-If you use this code, please cite the paper above. Correspondence: Eunji Sim (esim@yonsei.ac.kr).
+If you use this code, please cite the original paper. https://tccl.yonsei.ac.kr/
