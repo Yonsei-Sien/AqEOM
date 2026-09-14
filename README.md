@@ -1,11 +1,5 @@
 # AqEOM — Anti-Hermitized quantum Equation-of-Motion
 
-Code accompanying
-
-> **Excitation-Energy Accuracy Does Not Guarantee Observable Fidelity:
-> Rethinking Validation of Excited-State Quantum Algorithms**
-> Gyumin Kim, Youngsam Kim, Sehun Kim, and Eunji Sim — Department of Chemistry, Yonsei University
-
 > Code written by Gyumin Kim
 
 The repository contains `pyqake`, a small Qiskit + PySCF toolkit for UCC / qEOM / QSE excited-state
@@ -13,29 +7,8 @@ calculations with direct observable evaluation, the production scripts that gene
 the paper (`Reproduce/Running/`), and the notebooks that turn those results into the figures and tables
 (`Reproduce/Analysis/`).
 
-| File | Content |
-| --- | --- |
-| `AqEOM_Main.pdf` | Main text (13 pp.) |
-| `AqEOM_SI.pdf` | Supplementary Materials (40 pp., SI.1–SI.13) |
-
 ---
 
-## What the paper does
-
-qEOM returns accurate excitation energies, but the state-transfer operator $\hat O_n^\dagger$ rebuilt from its
-eigenvectors is only constrained through commutator expectation values. When the same operator is used to
-prepare states for a *direct* property evaluation, $\langle 0|\hat O_n \hat A \hat O_m^\dagger|0\rangle$, Hermitian
-components such as ground-state leakage ($|0\rangle\langle 0|$) show up as large errors in dipole moments,
-state overlaps and RDMs, even though the excitation energies look fine.
-
-AqEOM applies an a posteriori Cartesian decomposition and keeps only the anti-Hermitian part:
-
-$$
-\hat U_n^\dagger \equiv \frac{\hat O_n^\dagger - \hat O_n}
-{\sqrt{\langle 0|(\hat O_n - \hat O_n^\dagger)(\hat O_n^\dagger - \hat O_n)|0\rangle}}
-$$
-
-The qEOM generalized eigenvalue problem itself is unchanged, and no extra quantum measurements are needed.
 The diagnostics the paper uses are:
 
 | Quantity | Definition (main text) | Where it is computed |
